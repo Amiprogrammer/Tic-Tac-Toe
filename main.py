@@ -4,6 +4,7 @@ from tkinter import messagebox
 master = Tk()
 master.iconbitmap("juliao-martins.ico")
 master.title("Tic Tac Toe")
+master.geometry(f"422x512+{(master.winfo_screenwidth() // 2) - (422 // 2)}+{(master.winfo_screenheight() // 2) - (512 // 2)}")
 
 def disable_box():
     global b1,b2,b3,b4,b5,b6,b7,b8,b9,counts,winner
