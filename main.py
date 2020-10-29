@@ -5,8 +5,19 @@ master = Tk()
 master.iconbitmap("juliao-martins.ico")
 master.title("Tic Tac Toe")
 
+winner = False
+
 def someonewon():
-    pass
+    global b1,b2,b3,b4,b5,b6,b7,b8,b9,winner,counts
+
+    # if counts == 9:
+
+    if b1["text"] == "X" and b2["text"] == "X" and b3["text"] == "X":
+        b1.config(fg="red", bg="white")
+        b2.config(fg="red", bg="white")
+        b3.config(fg="red", bg="white")
+        messagebox.showinfo("Tic Tac Toe","X is won!")
+
 
 clicked = True
 counts = 0
