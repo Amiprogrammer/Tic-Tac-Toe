@@ -6,7 +6,7 @@ master.iconbitmap("juliao-martins.ico")
 master.title("Tic Tac Toe")
 
 def disable_box():
-    global b1,b2,b3,b4,b5,b6,b7,b8,b9,counts
+    global b1,b2,b3,b4,b5,b6,b7,b8,b9,counts,winner
 
     counts = 0
 
