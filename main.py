@@ -198,7 +198,6 @@ def all_here():
     b9 = Button(master, text=" ", fg="white", bg="black", font=("Apercu Mono",40), width=4, height=2, command=lambda: on_click(b9))
 
 
-
     b1.grid(row=0, column=0)
     b2.grid(row=0, column=1)
     b3.grid(row=0, column=2)
@@ -213,17 +212,5 @@ def all_here():
 
 
 all_here()
-
-menubar = Menu(master)
-dotmenu = Menu(menubar, tearoff=0)
-menubar.add_cascade(label="...", menu=dotmenu)
-dotmenu.add_command(label="Reset", command=lambda: all_here())
-
-helpmenu = Menu(menubar, tearoff=0)
-menubar.add_cascade(label="help", menu=helpmenu)
-helpmenu.add_command(label="about", command=show_about)
-
-# display menubar
-master.config(menu=menubar)
 
 master.mainloop()
