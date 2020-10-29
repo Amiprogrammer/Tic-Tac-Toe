@@ -29,7 +29,7 @@ def disable_box():
         messagebox.showinfo("Tic Tac Toe","New Game!")
         all_here()
     else:
-        messagebox.showwarning("Tic Tac Toe","Program will be close!")
+        messagebox.showwarning("Tic Tac Toe","Program will be close!\n(C) 2020. built by Juliao Martins")
         master.destroy()
 
 winner = False
@@ -178,7 +178,7 @@ def on_click(b):
             messagebox.showinfo("Tic Tac Toe","New Game!")
             all_here()
         else:
-            messagebox.showwarning("Tic Tac Toe","Program will be close!")
+            messagebox.showwarning("Tic Tac Toe","Program will be close!\n(C) 2020. built by Juliao Martins")
             master.destroy()
         counts = 0
 
