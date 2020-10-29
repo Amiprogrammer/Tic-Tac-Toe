@@ -31,6 +31,113 @@ def someonewon():
         b3.config(fg="red", bg="white")
         messagebox.showinfo("Tic Tac Toe","X is won!")
         disable_box()
+        winner = True
+    elif b4["text"] == "X" and b5["text"] == "X" and b6["text"] == "X":
+        b4.config(fg="red", bg="white")
+        b5.config(fg="red", bg="white")
+        b6.config(fg="red", bg="white")
+        messagebox.showinfo("Tic Tac Toe","X is won!")
+        disable_box()
+        winner = True
+    elif b7["text"] == "X" and b8["text"] == "X" and b9["text"] == "X":
+        b7.config(fg="red", bg="white")
+        b8.config(fg="red", bg="white")
+        b9.config(fg="red", bg="white")
+        messagebox.showinfo("Tic Tac Toe","X is won!")
+        disable_box()
+        winner = True
+    elif b1["text"] == "X" and b4["text"] == "X" and b7["text"] == "X":
+        b1.config(fg="red", bg="white")
+        b4.config(fg="red", bg="white")
+        b7.config(fg="red", bg="white")
+        messagebox.showinfo("Tic Tac Toe","X is won!")
+        disable_box()
+        winner = True
+    elif b2["text"] == "X" and b5["text"] == "X" and b8["text"] == "X":
+        b2.config(fg="red", bg="white")
+        b5.config(fg="red", bg="white")
+        b8.config(fg="red", bg="white")
+        messagebox.showinfo("Tic Tac Toe","X is won!")
+        disable_box()
+        winner = True
+    elif b3["text"] == "X" and b6["text"] == "X" and b9["text"] == "X":
+        b3.config(fg="red", bg="white")
+        b6.config(fg="red", bg="white")
+        b9.config(fg="red", bg="white")
+        messagebox.showinfo("Tic Tac Toe","X is won!")
+        disable_box()
+        winner = True
+    elif b1["text"] == "X" and b5["text"] == "X" and b9["text"] == "X":
+        b1.config(fg="red", bg="white")
+        b5.config(fg="red", bg="white")
+        b9.config(fg="red", bg="white")
+        messagebox.showinfo("Tic Tac Toe","X is won!")
+        disable_box()
+        winner = True
+    elif b3["text"] == "X" and b5["text"] == "X" and b7["text"] == "X":
+        b3.config(fg="red", bg="white")
+        b5.config(fg="red", bg="white")
+        b7.config(fg="red", bg="white")
+        messagebox.showinfo("Tic Tac Toe","X is won!")
+        disable_box()
+        winner = True
+
+    if b1["text"] == "O" and b2["text"] == "O" and b3["text"] == "O":
+        b1.config(fg="red", bg="white")
+        b2.config(fg="red", bg="white")
+        b3.config(fg="red", bg="white")
+        messagebox.showinfo("Tic Tac Toe","O is won!")
+        disable_box()
+        winner = True
+    elif b4["text"] == "O" and b5["text"] == "O" and b6["text"] == "O":
+        b4.config(fg="red", bg="white")
+        b5.config(fg="red", bg="white")
+        b6.config(fg="red", bg="white")
+        messagebox.showinfo("Tic Tac Toe","O is won!")
+        disable_box()
+        winner = True
+    elif b7["text"] == "O" and b8["text"] == "O" and b9["text"] == "O":
+        b7.config(fg="red", bg="white")
+        b8.config(fg="red", bg="white")
+        b9.config(fg="red", bg="white")
+        messagebox.showinfo("Tic Tac Toe","O is won!")
+        disable_box()
+        winner = True
+    elif b1["text"] == "O" and b4["text"] == "O" and b7["text"] == "O":
+        b1.config(fg="red", bg="white")
+        b4.config(fg="red", bg="white")
+        b7.config(fg="red", bg="white")
+        messagebox.showinfo("Tic Tac Toe","O is won!")
+        disable_box()
+        winner = True
+    elif b2["text"] == "O" and b5["text"] == "O" and b8["text"] == "O":
+        b2.config(fg="red", bg="white")
+        b5.config(fg="red", bg="white")
+        b8.config(fg="red", bg="white")
+        messagebox.showinfo("Tic Tac Toe","O is won!")
+        disable_box()
+        winner = True
+    elif b3["text"] == "O" and b6["text"] == "O" and b9["text"] == "O":
+        b3.config(fg="red", bg="white")
+        b6.config(fg="red", bg="white")
+        b9.config(fg="red", bg="white")
+        messagebox.showinfo("Tic Tac Toe","O is won!")
+        disable_box()
+        winner = True
+    elif b1["text"] == "O" and b5["text"] == "O" and b9["text"] == "O":
+        b1.config(fg="red", bg="white")
+        b5.config(fg="red", bg="white")
+        b9.config(fg="red", bg="white")
+        messagebox.showinfo("Tic Tac Toe","O is won!")
+        disable_box()
+        winner = True
+    elif b3["text"] == "O" and b5["text"] == "O" and b7["text"] == "O":
+        b3.config(fg="red", bg="white")
+        b5.config(fg="red", bg="white")
+        b7.config(fg="red", bg="white")
+        messagebox.showinfo("Tic Tac Toe","X is won!")
+        disable_box()
+        winner = True
 
 
 clicked = True
