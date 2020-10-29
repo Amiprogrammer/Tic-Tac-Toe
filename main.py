@@ -9,19 +9,31 @@ clicked = True
 counts = 0
 
 def on_click(b):
-    pass
+    global clicked,counts
 
-b1 = Button(master, text="", fg="white", bg="black", font=("Apercu Mono",40), width=4, height=2, command=lambda: on_click(b1))
-b2 = Button(master, text="", fg="white", bg="black", font=("Apercu Mono",40), width=4, height=2, command=lambda: on_click(b2))
-b3 = Button(master, text="", fg="white", bg="black", font=("Apercu Mono",40), width=4, height=2, command=lambda: on_click(b3))
+    if b["text"] == " " and clicked == True:
+        b.config(text="X")
+        counts += 1
+        clicked = False
+    elif b["text"] == " " and clicked == False:
+        b.config(text="O")
+        counts += 1
+        clicked = True
+    else:
+        messagebox.showerror("Tic Tac Toe","The box already been selected!\npick another box.")
 
-b4 = Button(master, text="", fg="white", bg="black", font=("Apercu Mono",40), width=4, height=2, command=lambda: on_click(b4))
-b5 = Button(master, text="", fg="white", bg="black", font=("Apercu Mono",40), width=4, height=2, command=lambda: on_click(b5))
-b6 = Button(master, text="", fg="white", bg="black", font=("Apercu Mono",40), width=4, height=2, command=lambda: on_click(b6))
 
-b7 = Button(master, text="", fg="white", bg="black", font=("Apercu Mono",40), width=4, height=2, command=lambda: on_click(b7))
-b8 = Button(master, text="", fg="white", bg="black", font=("Apercu Mono",40), width=4, height=2, command=lambda: on_click(b8))
-b9 = Button(master, text="", fg="white", bg="black", font=("Apercu Mono",40), width=4, height=2, command=lambda: on_click(b9))
+b1 = Button(master, text=" ", fg="white", bg="black", font=("Apercu Mono",40), width=4, height=2, command=lambda: on_click(b1))
+b2 = Button(master, text=" ", fg="white", bg="black", font=("Apercu Mono",40), width=4, height=2, command=lambda: on_click(b2))
+b3 = Button(master, text=" ", fg="white", bg="black", font=("Apercu Mono",40), width=4, height=2, command=lambda: on_click(b3))
+
+b4 = Button(master, text=" ", fg="white", bg="black", font=("Apercu Mono",40), width=4, height=2, command=lambda: on_click(b4))
+b5 = Button(master, text=" ", fg="white", bg="black", font=("Apercu Mono",40), width=4, height=2, command=lambda: on_click(b5))
+b6 = Button(master, text=" ", fg="white", bg="black", font=("Apercu Mono",40), width=4, height=2, command=lambda: on_click(b6))
+
+b7 = Button(master, text=" ", fg="white", bg="black", font=("Apercu Mono",40), width=4, height=2, command=lambda: on_click(b7))
+b8 = Button(master, text=" ", fg="white", bg="black", font=("Apercu Mono",40), width=4, height=2, command=lambda: on_click(b8))
+b9 = Button(master, text=" ", fg="white", bg="black", font=("Apercu Mono",40), width=4, height=2, command=lambda: on_click(b9))
 
 
 
