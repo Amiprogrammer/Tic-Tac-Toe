@@ -5,6 +5,9 @@ master = Tk()
 master.iconbitmap("juliao-martins.ico")
 master.title("Tic Tac Toe")
 
+def someonewon():
+    pass
+
 clicked = True
 counts = 0
 
@@ -15,10 +18,12 @@ def on_click(b):
         b.config(text="X")
         counts += 1
         clicked = False
+        someonewon()
     elif b["text"] == " " and clicked == False:
         b.config(text="O")
         counts += 1
         clicked = True
+        someonewon()
     else:
         messagebox.showerror("Tic Tac Toe","The box already been selected!\npick another box.")
 
