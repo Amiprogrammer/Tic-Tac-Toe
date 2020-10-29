@@ -6,7 +6,9 @@ master.iconbitmap("juliao-martins.ico")
 master.title("Tic Tac Toe")
 
 def disable_box():
-    global b1,b2,b3,b4,b5,b6,b7,b8,b9
+    global b1,b2,b3,b4,b5,b6,b7,b8,b9,counts
+
+    counts = 0
 
     b1.config(state=DISABLED)
     b2.config(state=DISABLED)
@@ -31,7 +33,15 @@ winner = False
 def someonewon():
     global b1,b2,b3,b4,b5,b6,b7,b8,b9,winner,counts
 
-    # if counts == 9:
+    # if player X or O isn't win!
+    if counts == 9:
+        # ask user to reset or quit the game
+        if messagebox.askyesno("Tic Tac Toe","Do you want to play again!"):
+            messagebox.showinfo("Tic Tac Toe","New Game!")
+            all_here()
+        else:
+            messagebox.showwarning("Tic Tac Toe","Program will be close!")
+            master.destroy()
 
     if b1["text"] == "X" and b2["text"] == "X" and b3["text"] == "X":
         b1.config(fg="red", bg="white")
