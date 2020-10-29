@@ -18,6 +18,14 @@ def disable_box():
     b8.config(state=DISABLED)
     b9.config(state=DISABLED)
 
+    # ask user to reset or quit the game
+    if messagebox.askyesno("Tic Tac Toe","Do you want to play again!"):
+        messagebox.showinfo("Tic Tac Toe","New Game!")
+        all_here()
+    else:
+        messagebox.showwarning("Tic Tac Toe","Program will be close!")
+        master.destroy()
+
 winner = False
 
 def someonewon():
