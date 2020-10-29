@@ -6,6 +6,9 @@ master.iconbitmap("juliao-martins.ico")
 master.title("Tic Tac Toe")
 master.geometry(f"422x512+{(master.winfo_screenwidth() // 2) - (422 // 2)}+{(master.winfo_screenheight() // 2) - (512 // 2)}")
 
+def show_about():
+    pass
+
 def disable_box():
     global b1,b2,b3,b4,b5,b6,b7,b8,b9,counts,winner
 
@@ -32,17 +35,7 @@ def disable_box():
 winner = False
 
 def someonewon():
-    global b1,b2,b3,b4,b5,b6,b7,b8,b9,winner,counts
-
-    # if player X or O isn't win!
-    if counts == 9:
-        # ask user to reset or quit the game
-        if messagebox.askyesno("Tic Tac Toe","Do you want to play again!"):
-            messagebox.showinfo("Tic Tac Toe","New Game!")
-            all_here()
-        else:
-            messagebox.showwarning("Tic Tac Toe","Program will be close!")
-            master.destroy()
+    global b1,b2,b3,b4,b5,b6,b7,b8,b9,winner
 
     if b1["text"] == "X" and b2["text"] == "X" and b3["text"] == "X":
         b1.config(fg="red", bg="white")
@@ -178,6 +171,17 @@ def on_click(b):
     else:
         messagebox.showerror("Tic Tac Toe","The box already been selected!\npick another box.")
 
+    # if player X or O isn't win!
+    if counts == 9:
+        # ask user to reset or quit the game
+        if messagebox.askyesno("Tic Tac Toe","Do you want to play again!"):
+            messagebox.showinfo("Tic Tac Toe","New Game!")
+            all_here()
+        else:
+            messagebox.showwarning("Tic Tac Toe","Program will be close!")
+            master.destroy()
+        counts = 0
+
 def all_here():
     global b1,b2,b3,b4,b5,b6,b7,b8,b9,clicked,counts,winner
 
@@ -209,5 +213,17 @@ def all_here():
 
 
 all_here()
+
+menubar = Menu(master)
+dotmenu = Menu(menubar, tearoff=0)
+menubar.add_cascade(label="...", menu=dotmenu)
+dotmenu.add_command(label="Reset", command=lambda: all_here())
+
+helpmenu = Menu(menubar, tearoff=0)
+menubar.add_cascade(label="help", menu=helpmenu)
+helpmenu.add_command(label="about", command=show_about)
+
+# display menubar
+master.config(menu=menubar)
 
 master.mainloop()
