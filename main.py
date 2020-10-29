@@ -5,6 +5,19 @@ master = Tk()
 master.iconbitmap("juliao-martins.ico")
 master.title("Tic Tac Toe")
 
+def disable_box():
+    global b1,b2,b3,b4,b5,b6,b7,b8,b9
+
+    b1.config(state=DISABLED)
+    b2.config(state=DISABLED)
+    b3.config(state=DISABLED)
+    b4.config(state=DISABLED)
+    b5.config(state=DISABLED)
+    b6.config(state=DISABLED)
+    b7.config(state=DISABLED)
+    b8.config(state=DISABLED)
+    b9.config(state=DISABLED)
+
 winner = False
 
 def someonewon():
@@ -17,6 +30,7 @@ def someonewon():
         b2.config(fg="red", bg="white")
         b3.config(fg="red", bg="white")
         messagebox.showinfo("Tic Tac Toe","X is won!")
+        disable_box()
 
 
 clicked = True
