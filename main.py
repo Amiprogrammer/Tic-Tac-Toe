@@ -147,7 +147,7 @@ def someonewon():
         b3.config(fg="red", bg="white")
         b5.config(fg="red", bg="white")
         b7.config(fg="red", bg="white")
-        messagebox.showinfo("Tic Tac Toe","X is won!")
+        messagebox.showinfo("Tic Tac Toe","O is won!")
         disable_box()
         winner = True
 
